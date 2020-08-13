@@ -14,32 +14,33 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.purple[300],
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        crossAxisAlignment: CrossAxisAlignment.end,
+      body: Row(
         children: [
-          Row(
-            children: [
-              Text('Hello'),
-              Text('World')
-            ],
+          Expanded(child: Image.asset('assets/image1.jpg'),
+          flex: 3,),
+          Expanded(
+            flex: 3, //mendapatkan space 3/ space layout di device (jumlah semua flex yg ada di beberapa Expanded Widget
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.cyan,
+              child: Text('1'),
+            ),
           ),
-          Container(
-            padding: EdgeInsets.all(20.0),
-            color: Colors.cyan,
-            child: Text('One'),
+          Expanded(
+            flex: 2, //mendapatkan space 2 / space layout di device
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.amberAccent,
+              child: Text('2'),
+            ),
           ),
-          Container(
-            padding: EdgeInsets.all(30.0),
-            color: Colors.amberAccent,
-            child: Text('Two'),
-          ),
-          Container(
-            padding: EdgeInsets.all(40.0),
-            color: Colors.pink,
-            child: Text('Three'),
-          ),
-        ],
+          Expanded(
+            flex: 1, //mendapatkan space 1/ space layout di device
+            child: Container(padding: EdgeInsets.all(30.0),
+              color: Colors.pink,
+              child: Text('3'),
+            ),
+          ),],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
