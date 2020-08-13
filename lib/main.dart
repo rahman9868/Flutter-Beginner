@@ -15,10 +15,33 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.purple[300],
       ),
       body: Center(
-        child: Image.asset('assets/image3.jpg') //from local asset
-        //child: Image.network('http://....') from internet
-
-
+        child: IconButton(
+          onPressed: () {
+            print('you clicked me');
+          },
+          icon: Icon(Icons.alternate_email),
+          color: Colors.amber[200],
+        ),
+        /*child: RaisedButton.icon(
+          onPressed: () {},
+          icon: Icon(
+            Icons.mail
+          ),
+          label: Text('Mail Me'),
+          color: Colors.grey,
+        )
+        child: FlatButton(
+          onPressed: () {
+            print('you press me');
+          },
+          child: Text('Press Me'),
+          color: Colors.deepPurple[300],
+        ),
+        child: Icon(
+          Icons.airport_shuttle,
+          color: Colors.purple[500],
+          size: 50.0,
+        )*/
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
